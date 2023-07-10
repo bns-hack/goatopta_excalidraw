@@ -1,0 +1,23 @@
+kind: Application
+name: excalidraw
+gitRepo: 'https://github.com/goatopta/excalidraw.git'
+gitBranch: master
+gitApplicationPath: /
+dockerCompose:
+    build:
+        context: .
+        dockerfile: Dockerfile
+        args:
+            NODE_ENV: development
+    environment:
+        NODE_ENV: development
+    healthcheck:
+        disable: true
+    ports:
+        - '3000:80'
+    stdin_open: true
+hosts:
+    -
+        hostname: 'excalidraw-{{ env.base_domain }}'
+        path: /
+        servicePort: 3000
