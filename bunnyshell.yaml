@@ -1,6 +1,6 @@
 kind: Application
 name: excalidraw
-gitRepo: 'https://github.com/goatopta/excalidraw.git'
+gitRepo: 'https://github.com/bns-hack/goatopta_excalidraw.git'
 gitBranch: master
 gitApplicationPath: /
 dockerCompose:
